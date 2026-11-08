@@ -1,0 +1,31 @@
+{
+  "name": "api-treinos-esportivos",
+  "version": "1.0.0",
+  "description": "API REST para gerenciamento de treinos, carga semanal e risco de sobrecarga de atletas (Node.js + Express + Sequelize + MySQL)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "db:create": "sequelize-cli db:create",
+    "db:migrate": "sequelize-cli db:migrate",
+    "db:migrate:undo": "sequelize-cli db:migrate:undo:all",
+    "db:seed": "sequelize-cli db:seed:all",
+    "db:seed:undo": "sequelize-cli db:seed:undo:all",
+    "db:reset": "sequelize-cli db:migrate:undo:all && sequelize-cli db:migrate && sequelize-cli db:seed:all",
+    "test": "node --test tests/regras.test.js",
+    "test:api": "node scripts/testes-api.js"
+  },
+  "keywords": ["express", "sequelize", "mysql", "api-rest", "treinos"],
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.11.5",
+    "sequelize": "^6.37.5",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "sequelize-cli": "^6.6.2"
+  }
+}
